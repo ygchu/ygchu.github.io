@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>swift 函数和闭包 | ygchu的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="函数的定义使用func开始一个函数的定义，使用”-&gt;”隔开函数的参数列表和函数的返回值类型，在函数调用的时候需要加上函数的参数标签（参数标签默认不可以省略：可以提高程序的可读性） 1234func greet(person: String, day: String) -&gt; String &amp;#123;    return &quot;Hello \(person), today is \">
+  <meta name="description" content="介绍swift中函数和闭包的定义和使用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="swift 函数和闭包">
 <meta property="og:url" content="http://example.com/2020/09/15/swift-%E5%87%BD%E6%95%B0%E5%92%8C%E9%97%AD%E5%8C%85/index.html">
 <meta property="og:site_name" content="ygchu的博客">
-<meta property="og:description" content="函数的定义使用func开始一个函数的定义，使用”-&gt;”隔开函数的参数列表和函数的返回值类型，在函数调用的时候需要加上函数的参数标签（参数标签默认不可以省略：可以提高程序的可读性） 1234func greet(person: String, day: String) -&gt; String &amp;#123;    return &quot;Hello \(person), today is \">
+<meta property="og:description" content="介绍swift中函数和闭包的定义和使用">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-15T12:39:41.000Z">
-<meta property="article:modified_time" content="2020-09-15T13:14:35.602Z">
+<meta property="article:modified_time" content="2020-09-16T01:07:32.983Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="swift教程">
 <meta name="twitter:card" content="summary">
@@ -48,7 +48,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="https://s2.ax1x.com/2019/08/29/mLNNMF.jpg" class="js-avatar">
+			<img src="/assets/img/avatar.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/"></a></h1>
@@ -106,7 +106,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="https://s2.ax1x.com/2019/08/29/mLNNMF.jpg" class="js-avatar">
+				<img src="/assets/img/avatar.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author"></h1>
@@ -175,7 +175,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h2><p>使用func开始一个函数的定义，使用”-&gt;”隔开函数的参数列表和函数的返回值类型，在函数调用的时候需要加上函数的参数标签（参数标签默认不可以省略：可以提高程序的可读性）</p>
+        <p>介绍swift中函数和闭包的定义和使用</p>
+<a id="more"></a>
+
+<h2 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h2><p>使用func开始一个函数的定义，使用”-&gt;”隔开函数的参数列表和函数的返回值类型，在函数调用的时候需要加上函数的参数标签（参数标签默认不可以省略：可以提高程序的可读性）</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">greet</span><span class="params">(person: String, day: String)</span></span> -&gt; <span class="type">String</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;Hello \(person), today is \(day).&quot;</span></span><br><span class="line">&#125;</span><br><span class="line">greet(person: <span class="string">&quot;Bob&quot;</span>, day: <span class="string">&quot;Tuesday&quot;</span>)</span><br></pre></td></tr></table></figure>
 <p>补充：如果函数的返回值类型为Void，则”-&gt; Void”可以省略</p>
 <h2 id="函数的参数标签"><a href="#函数的参数标签" class="headerlink" title="函数的参数标签"></a>函数的参数标签</h2><p>默认情况下，函数使用其参数名作为函数的参数的外部标签，可以修改函数参数的外部标签或者省略函数参数的外部标签</p>
