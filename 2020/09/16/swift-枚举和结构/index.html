@@ -8,13 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>swift 枚举和结构 | ygchu的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="介绍swift中枚举以及结构体的定义和使用">
+<meta property="og:type" content="article">
 <meta property="og:title" content="swift 枚举和结构">
 <meta property="og:url" content="http://example.com/2020/09/16/swift-%E6%9E%9A%E4%B8%BE%E5%92%8C%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="ygchu的博客">
+<meta property="og:description" content="介绍swift中枚举以及结构体的定义和使用">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-16T07:01:03.000Z">
-<meta property="article:modified_time" content="2020-09-16T07:22:00.683Z">
+<meta property="article:modified_time" content="2020-09-16T10:14:24.295Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="swift教程">
 <meta name="twitter:card" content="summary">
@@ -173,7 +175,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>介绍swift中枚举以及结构体的定义和使用</p>
+<a id="more"></a>
+
+<h2 id="枚举的定义"><a href="#枚举的定义" class="headerlink" title="枚举的定义"></a>枚举的定义</h2><p>使用enum关键字定义一个枚举类型，和其他类型一样，枚举类型允许有自己的成员方法(枚举类可以看作一个多例类)，默认情况枚举变量的rawValue的类型为Int，数值从0开始递增，但是可以改变枚举变量的rawValue的类型和值，通过枚举类型变量的rawValue属性来访问其rawValue</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Rank</span>: <span class="title">Int</span> </span>&#123;</span><br><span class="line">    <span class="keyword">case</span> ace = <span class="number">1</span></span><br><span class="line">    <span class="keyword">case</span> two, three, four, five, six, seven, eight, nine, ten</span><br><span class="line">    <span class="keyword">case</span> jack, queen, king</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 枚举类型的成员方法</span></span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">simpleDescription</span><span class="params">()</span></span> -&gt; <span class="type">String</span> &#123;</span><br><span class="line">        <span class="keyword">switch</span> <span class="keyword">self</span> &#123;</span><br><span class="line">        <span class="keyword">case</span> .ace: <span class="comment">// 在使用枚举类型进行switch语句匹配的时候，由于变量的类型已知，因此类型前缀可以省略</span></span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;ace&quot;</span></span><br><span class="line">        <span class="keyword">case</span> .jack:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;jack&quot;</span></span><br><span class="line">        <span class="keyword">case</span> .queen:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;queen&quot;</span></span><br><span class="line">        <span class="keyword">case</span> .king:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;king&quot;</span></span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="type">String</span>(<span class="keyword">self</span>.rawValue)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> ace = <span class="type">Rank</span>.ace</span><br><span class="line"><span class="keyword">let</span> aceRawValue = ace.rawValue</span><br></pre></td></tr></table></figure>
+
+<h2 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h2><p>使用struct来创建一个结构体，结构体允许有自己的成员变量和成员方法，同时还允许有自己的构造函数，但是结构体不允许继承，在参数传递的方式采用以值传递的方式，并且结构体的默认构造函数是依次以自己的参数名作为参数标签的形式</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Card</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> rank: <span class="type">Rank</span></span><br><span class="line">    <span class="keyword">var</span> suit: <span class="type">Suit</span></span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">simpleDescription</span><span class="params">()</span></span> -&gt; <span class="type">String</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;The \(rank.simpleDescription()) of \(suit.simpleDescription())&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 结构体的默认构造函数（以自己的成员变量依次作为函数标签）</span></span><br><span class="line"><span class="keyword">let</span> threeOfSpades = <span class="type">Card</span>(rank: .three, suit: .spades)</span><br><span class="line"><span class="keyword">let</span> threeOfSpadesDescription = threeOfSpades.simpleDescription()</span><br></pre></td></tr></table></figure>
       
 
       
