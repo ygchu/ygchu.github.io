@@ -16,7 +16,7 @@
 <meta property="og:description" content="介绍操作系统的引导过程">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-17T06:09:11.000Z">
-<meta property="article:modified_time" content="2020-09-17T06:24:01.061Z">
+<meta property="article:modified_time" content="2020-09-17T06:50:03.241Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="操作系统">
 <meta name="twitter:card" content="summary">
@@ -182,9 +182,20 @@
 <p>主引导记录的组成：</p>
 <ol>
 <li>调用操作系统的代码（前446字节）</li>
-<li>分区表（4x16字节）</li>
+<li>硬盘分区表DPT（4x16字节）</li>
 <li>主引导记录签名（0x55和0xaa）</li>
 </ol>
+<p>硬盘分区表表示了硬盘的逻辑结构，表示一个物理磁盘被划分为多个独立的逻辑分区，每个分区内可以有独立的文件系统，在windows的磁盘管理中可以进行硬盘分区调整</p>
+<p>DPT的组成：</p>
+<ol>
+<li>第1个字节：如果为0x80，就表示该主分区是激活分区，控制权要转交给这个分区。四个主分区里面只能有一个是激活的。</li>
+<li>第2-4个字节：主分区第一个扇区的物理位置（柱面、磁头、扇区号等等）。</li>
+<li>第5个字节：主分区类型。</li>
+<li>第6-8个字节：主分区最后一个扇区的物理位置。</li>
+<li>第9-12字节：该主分区第一个扇区的逻辑地址。</li>
+<li>第13-16字节：主分区的扇区总数。</li>
+</ol>
+<p>由于DPT的表项限制，因此使用MBR的单个硬盘可利用空间最大也不超过2TB，如果想要使用更大的硬盘，需要提高每个扇区的字节数或者更换为GPT</p>
 <h2 id="第四阶段：操作系统"><a href="#第四阶段：操作系统" class="headerlink" title="第四阶段：操作系统"></a>第四阶段：操作系统</h2><p>控制权转交给操作系统，操作系统首先将其内核载入内存，内核再负责加载系统的各个模块，至此，全部启动程序完成</p>
 
       
