@@ -152,6 +152,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-PicGo-github搭建图床" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/17/PicGo-github%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/">PicGo+github搭建图床</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/17/PicGo-github%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/" class="archive-article-date">
+  	<time datetime="2020-09-17T02:17:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>介绍如何通过PicGo和github搭建图床<br>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">PicGo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">图床</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/17/PicGo-github%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-数学建模案例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -172,33 +250,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h1><blockquote>
-<p>模型是为了一定目的，对客观事物的一部分进行简缩、抽象、提炼出来的原型的替代物，模型反映了原型中人们需要的那一部分特征</p>
-</blockquote>
-<p>质点是一个典型的模型，强调问题的主要因素，忽略次要因素</p>
-<h1 id="建模步骤"><a href="#建模步骤" class="headerlink" title="建模步骤"></a>建模步骤</h1><ul>
-<li>针对问题特点和建模目的做出合理的，简化的假设</li>
-<li>用数学语言和符号描述问题</li>
-<li>使用数学工具解决问题</li>
-</ul>
-<h1 id="数学模型举例"><a href="#数学模型举例" class="headerlink" title="数学模型举例"></a>数学模型举例</h1><h2 id="椅子问题"><a href="#椅子问题" class="headerlink" title="椅子问题"></a>椅子问题</h2><p>问题描述：椅子能否在不平的地面上放稳</p>
-<p>模型假设：</p>
-<ul>
-<li>椅子的四条腿一样长，并且四脚连线为正方形</li>
-<li>地面高度连续变化，可以看作连续曲面</li>
-<li>椅子在任意位置至少有三条腿同时着地</li>
-</ul>
-<p>使用数学语言描述模型：<br>将椅脚与地面的举例表示为夹角$\theta$的函数，记A,C两脚和地面的距离之和为$f(\theta)$，B,D两脚和地面的距离之和为$g(\theta)$；</p>
-<p>根据模型假设，$f(\theta)$和$g(\theta)$都是连续函数，对于任意$\theta$，至少有一个为0，因此$f(\theta)g(\theta) = 0$；</p>
-<p>不妨设$f(0) &gt; 0, g(0) = 0$，则将椅子旋转$\frac{\pi}{2}$之后，交换对角线，因此$g(\frac{\pi}{2}) = 0, f(\frac{\pi}{2}) &gt; 0$，令$h(\theta) = f(\theta) - g(\theta)$，则h为连续函数，因此存在$ 0 \le \theta_0 \le \frac{\pi}{2}$使得$h(\theta_0) = 0$，即$f(\theta_0) = g(\theta_0)$，又由于$f(\theta_0)g(\theta_0)=0$，因此有$f(\theta_0) = g(\theta_0) = 0$.</p>
-<h2 id="过河问题"><a href="#过河问题" class="headerlink" title="过河问题"></a>过河问题</h2><p>问题描述：有三个商人和三个仆人需要过河，有一艘小船最多能载2人，在过河过程中，如果河的任一岸仆人比商人多，则仆人会杀掉商人，制定一个安全的渡河策略</p>
-<p>数学建模：使用$s_k = (x_k, y_k)$表示第k次渡河时此岸的商人数和仆人数，使用$d_k = (u_k, v_k)$表示第k次渡船上的商人数和仆人数，则状态转移方程为$s_{k+1} = s_k + (-1)^kd_k$</p>
-<p>模型求解：该模型是一类典型的算法问题，可以使用编程的方式和容易实现穷举的策略（将合法状态看作点，产生状态转移的动作看作边形成状态转换图，在该图上搜索从初始状态到目标状态的一条路径得到问题的解）</p>
-<h2 id="bug语句定位"><a href="#bug语句定位" class="headerlink" title="bug语句定位"></a>bug语句定位</h2><p>问题描述：给定一个存在潜在bug的程序和若干测试用例，如何通过测试用例的执行结果推断出最有可能存在bug的语句</p>
-<p>模型求解：记录对于每个测试用例执行的语句形成一个频谱矩阵，基于频谱矩阵进行分析，分析的基本思路为如果一个语句被越多的失败的测试用例执行过，同时被越少的成功的测试用例执行过，则该语句越有可能是bug语句</p>
-<h2 id="软件规模预测"><a href="#软件规模预测" class="headerlink" title="软件规模预测"></a>软件规模预测</h2><p>问题描述：基于软件系统的UML类图来预测软件系统的代码量</p>
-<p>模型求解：从UML类图上收集结构度量信息，构建一个输入为结构度量信息，输出为软件系统的代码量的机器学习预测模型</p>
-
+        <p>介绍数学模型的概念和四个数学模型的例子<br>
+        
       
 
       
@@ -822,6 +875,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">PicGo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">图床</a>
               </li>
             
             <div class="clearfix"></div>
