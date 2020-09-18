@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: 图床 | ygchu的博客</title>
+  <title>linux终端常用命令 | ygchu的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ygchu的博客">
-<meta property="og:url" content="http://example.com/tags/%E5%9B%BE%E5%BA%8A/index.html">
+  <meta name="description" content="linux终端是每个程序员必须要掌握的工具，在此总结整理了一些我在日常使用中常用的命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux终端常用命令">
+<meta property="og:url" content="http://example.com/2020/09/18/linux%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="ygchu的博客">
+<meta property="og:description" content="linux终端是每个程序员必须要掌握的工具，在此总结整理了一些我在日常使用中常用的命令">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-09-18T01:04:02.000Z">
+<meta property="article:modified_time" content="2020-09-18T01:38:41.678Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="ygchu的博客" type="application/atom+xml">
@@ -150,64 +155,193 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-linux终端常用命令" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/17/PicGo-github%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/" class="archive-article-date">
-  	<time datetime="2020-09-17T02:17:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-17</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/17/PicGo-github%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/">PicGo+github搭建图床</a>
+    <h1 class="article-title" itemprop="name">
+      linux终端常用命令
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/09/18/linux%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="archive-article-date">
+  	<time datetime="2020-09-18T01:04:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>linux终端是每个程序员必须要掌握的工具，在此总结整理了一些我在日常使用中常用的命令<br><a id="more"></a></p>
+<h2 id="ls命令"><a href="#ls命令" class="headerlink" title="ls命令"></a>ls命令</h2><ul>
+<li>ls：查看所有非隐藏文件</li>
+<li>ls -a：查看所有文件</li>
+<li>ls -l：查看所有文件的详细信息</li>
+<li>ls -lh：详细信息中文件大小以易读方式显示</li>
+<li>ls -R：递归查看文件夹中的内容<h2 id="cd命令"><a href="#cd命令" class="headerlink" title="cd命令"></a>cd命令</h2></li>
+<li>cd：跳转到家目录</li>
+<li>cd ..：跳转到父目录</li>
+<li>cd path：跳转到指定目录（path以/开头则为绝对路径，否则为相对路径）<h2 id="pwd命令"><a href="#pwd命令" class="headerlink" title="pwd命令"></a>pwd命令</h2>查看工作路径<h2 id="mkdir命令"><a href="#mkdir命令" class="headerlink" title="mkdir命令"></a>mkdir命令</h2></li>
+<li>mkdir newdir：创建一个名为newdir的空文件夹</li>
+<li>mkdir -p newdir：如果newdir的父目录不存在则递归创建<h2 id="rmdir和rm命令"><a href="#rmdir和rm命令" class="headerlink" title="rmdir和rm命令"></a>rmdir和rm命令</h2></li>
+<li>rmdir dir：删除dir文件夹，要求其为空</li>
+<li>rm -r：递归删除dir文件夹，可能删除失败</li>
+<li>rm -rf：强制递归删除dir文件夹<h2 id="mv命令"><a href="#mv命令" class="headerlink" title="mv命令"></a>mv命令</h2></li>
+<li>mv file1 file2：将file1重命名为file2</li>
+<li>mv file1 dir1：将file1移动到dir1下（同一个目录下不允许有同名的文件或文件夹）<h2 id="cp命令"><a href="#cp命令" class="headerlink" title="cp命令"></a>cp命令</h2></li>
+<li>cp file1 file2：将file1复制新的一份为file2</li>
+<li>cp file1 dir1：将file1复制一份到dir1下<h2 id="查看文件内容"><a href="#查看文件内容" class="headerlink" title="查看文件内容"></a>查看文件内容</h2></li>
+<li>cat file：查看file的内容（使用-n参数输出行号）</li>
+<li>head file：查看file前几行的内容（使用-n参数指定行数）</li>
+<li>tail file：查看file后几行的内容（使用-n参数指定行数）</li>
+<li>less file：滚动方式查看文件内容，可上下移动，检索内容（操作和vim类似，按q退出，通常和管道符配合使用）<h2 id="which命令"><a href="#which命令" class="headerlink" title="which命令"></a>which命令</h2>查看命令的存储路径<h2 id="chmod命令"><a href="#chmod命令" class="headerlink" title="chmod命令"></a>chmod命令</h2>用来改变文件的权限<h2 id="du命令"><a href="#du命令" class="headerlink" title="du命令"></a>du命令</h2>du -h dir：递归查看dir的容量（h表示以易读的方式展示）<br>du -sh dir：仅查看dir的容量<h2 id="kill命令"><a href="#kill命令" class="headerlink" title="kill命令"></a>kill命令</h2>kill -9 PID：杀死指定的进程<h2 id="ps命令"><a href="#ps命令" class="headerlink" title="ps命令"></a>ps命令</h2>ps：查看当前终端下属于当前用户的进程<h2 id="wc命令"><a href="#wc命令" class="headerlink" title="wc命令"></a>wc命令</h2></li>
+<li>wc file：依次输出文件的行数，单词数，字节数<h2 id="su命令"><a href="#su命令" class="headerlink" title="su命令"></a>su命令</h2>切换为超级用户<h2 id="tar命令"><a href="#tar命令" class="headerlink" title="tar命令"></a>tar命令</h2></li>
+<li>tar zxvf xx.tar.gz：解压压缩包（z表示会调用gzip进行解压，x表示恢复文件，v表示显示过程）</li>
+<li>tar czvf xx.tar.gz dir：压缩压缩包（z表示调用gzip进行压缩，c表示创建新文件，v表示显示过程）</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">PicGo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">图床</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/09/18/linux%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/09/18/%E7%93%A6%E6%A5%9E%E5%BC%8F%E5%A0%86%E5%8F%A0%E7%A3%81%E7%9B%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">瓦楞式堆叠磁盘</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -230,9 +364,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
