@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: 硬盘分区 | ygchu的博客</title>
+  <title>ubuntu安装 | ygchu的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ygchu的博客">
-<meta property="og:url" content="http://example.com/tags/%E7%A1%AC%E7%9B%98%E5%88%86%E5%8C%BA/index.html">
+  <meta name="description" content="ubuntu是最常用的linux发行版，下面简单介绍一下该系统常见的几种安装方式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu安装">
+<meta property="og:url" content="http://example.com/2020/09/27/ubuntu%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="ygchu的博客">
+<meta property="og:description" content="ubuntu是最常用的linux发行版，下面简单介绍一下该系统常见的几种安装方式">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-09-27T08:04:33.000Z">
+<meta property="article:modified_time" content="2020-09-27T08:27:52.482Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="ubuntu">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="ygchu的博客" type="application/atom+xml">
@@ -150,64 +155,191 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-ubuntu安装" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/17/windows%E7%A1%AC%E7%9B%98%E5%88%86%E5%8C%BA/" class="archive-article-date">
-  	<time datetime="2020-09-17T08:22:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-17</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/17/windows%E7%A1%AC%E7%9B%98%E5%88%86%E5%8C%BA/">windows硬盘分区</a>
+    <h1 class="article-title" itemprop="name">
+      ubuntu安装
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/09/27/ubuntu%E5%AE%89%E8%A3%85/" class="archive-article-date">
+  	<time datetime="2020-09-27T08:04:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ubuntu是最常用的linux发行版，下面简单介绍一下该系统常见的几种安装方式<br><a id="more"></a></p>
+<h2 id="双系统安装"><a href="#双系统安装" class="headerlink" title="双系统安装"></a>双系统安装</h2><p>这种安装方式我个人不是很推荐，因为ubuntu虽然应用的比较广泛，但是该系统的软件还是很匮乏，比如微信或者qq传个资料都要很费劲，和自己的window进行交互j也不是很方便，但是该方式能够最大限度的发挥硬件的性能，针对自己的需求选即可j</p>
+<p>准备内容：</p>
+<ul>
+<li>从ubuntu官网下载需要安装的镜像文件</li>
+<li>镜像制作软件</li>
+</ul>
+<p>安装步骤：</p>
+<ol>
+<li>使用磁盘管理工具为ubuntu分配好空闲的磁盘空间</li>
+<li>将ubunt镜像使用镜像制作软件刻录到u盘中</li>
+<li>重启电脑，选择从u盘启动开始系统的安装</li>
+<li>注意在安装的时候选择刚才分配的空闲的磁盘空间</li>
+</ol>
+<h2 id="虚拟机安装"><a href="#虚拟机安装" class="headerlink" title="虚拟机安装"></a>虚拟机安装</h2><p>虚拟机安装相比双系统安装更加简单，并且也更加安全，不用担心是否覆盖了自己原来的windows的内容，安装过程只需要选择相应的镜像然后直接进行安装即可</p>
+<h2 id="WSL安装"><a href="#WSL安装" class="headerlink" title="WSL安装"></a>WSL安装</h2><p>WSL是win10新增的一项功能，WSL的全称是windows subsystem linux（windows子系统linux），只需要启动该项功能，然后直接在微软应用商店安装即可</p>
+<p>步骤：</p>
+<ol>
+<li>打开控制面板，点击程序和功能，点击启用或关闭windows功能，勾选适用于linux的windows子系统，然后重启电脑应用更改</li>
+<li>在微软应用商店搜索ubuntu然后进行安装</li>
+<li>安装结束之后点击启动输入密码就可以直接进行使用了</li>
+<li>更换apt源为国内镜像源，命令行更新或者安装软件的速度更快（推荐使用清华开源镜像站，直接有配置好的sources.list文件，直接替换掉即可）</li>
+<li>更新源列表(sudo apt update)，更新软件(sudo apt upgrade)</li>
+<li>可以使用cmder等终端模拟器配合wsl使用，效果更佳(这种方式安装的ubuntu只有命令行界面，如果需要图形界面自己搜索相应的安装方式)</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">windows</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">硬盘分区</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">ubuntu</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/09/27/ubuntu%E5%AE%89%E8%A3%85/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/09/27/%E9%BB%91%E8%8B%B9%E6%9E%9C%E5%AE%89%E8%A3%85/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">黑苹果安装</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -230,9 +362,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
