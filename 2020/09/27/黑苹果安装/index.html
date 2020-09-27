@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>swift 异常处理 | ygchu的博客</title>
+  <title>黑苹果安装 | ygchu的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="介绍swift中的异常类型，异常的声明和抛出，异常的捕获和处理">
+  <meta name="description" content="装系统或许绝大多数人都很熟悉，装双系统可能绝大多数也知道如何操作，但是亲身安装黑苹果的人却并不多，事实上黑苹果的安装并不是很困难，但是想要达到完美黑苹果确实很难，我简单介绍一下如果安装一个能用的黑苹果">
 <meta property="og:type" content="article">
-<meta property="og:title" content="swift 异常处理">
-<meta property="og:url" content="http://example.com/2020/09/16/swift-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/index.html">
+<meta property="og:title" content="黑苹果安装">
+<meta property="og:url" content="http://example.com/2020/09/27/%E9%BB%91%E8%8B%B9%E6%9E%9C%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="ygchu的博客">
-<meta property="og:description" content="介绍swift中的异常类型，异常的声明和抛出，异常的捕获和处理">
+<meta property="og:description" content="装系统或许绝大多数人都很熟悉，装双系统可能绝大多数也知道如何操作，但是亲身安装黑苹果的人却并不多，事实上黑苹果的安装并不是很困难，但是想要达到完美黑苹果确实很难，我简单介绍一下如果安装一个能用的黑苹果">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-09-16T10:24:46.000Z">
-<meta property="article:modified_time" content="2020-09-16T10:34:15.304Z">
+<meta property="article:published_time" content="2020-09-27T07:11:25.000Z">
+<meta property="article:modified_time" content="2020-09-27T07:38:36.511Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="swift教程">
+<meta property="article:tag" content="黑苹果">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="ygchu的博客" type="application/atom+xml">
@@ -155,31 +155,46 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-swift-异常处理" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-黑苹果安装" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      swift 异常处理
+      黑苹果安装
     </h1>
   
 
         
-        <a href="/2020/09/16/swift-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-09-16T10:24:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-16</time>
+        <a href="/2020/09/27/%E9%BB%91%E8%8B%B9%E6%9E%9C%E5%AE%89%E8%A3%85/" class="archive-article-date">
+  	<time datetime="2020-09-27T07:11:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>介绍swift中的异常类型，异常的声明和抛出，异常的捕获和处理<br><a id="more"></a></p>
-<h2 id="异常类型"><a href="#异常类型" class="headerlink" title="异常类型"></a>异常类型</h2><p>任何实现了Error协议的类都可以作为异常类型，该类型的变量可以被抛出或者捕获<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用枚举类型定义异常</span></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">PrinterError</span>: <span class="title">Error</span> </span>&#123;</span><br><span class="line">    <span class="keyword">case</span> outOfPaper</span><br><span class="line">    <span class="keyword">case</span> noToner</span><br><span class="line">    <span class="keyword">case</span> onFire</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="声明和抛出异常"><a href="#声明和抛出异常" class="headerlink" title="声明和抛出异常"></a>声明和抛出异常</h2><p>使用throws声明异常，使用throw抛出异常<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方法的参数列表结尾追加throws表示该方法可能会抛出异常</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">send</span><span class="params">(job: Int, toPrinter printerName: String)</span></span> <span class="keyword">throws</span> -&gt; <span class="type">String</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> printerName == <span class="string">&quot;Never Has Toner&quot;</span> &#123;</span><br><span class="line">        <span class="comment">// 使用throw手动抛出一个异常</span></span><br><span class="line">        <span class="keyword">throw</span> <span class="type">PrinterError</span>.noToner</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;Job sent&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><p>使用do-catch子句进行异常处理，在do语句块中编写可能会出现异常的代码，在catch中对异常进行捕获，在defer语句块中编写无论是否发生异常都要执行的代码，通常用于资源的释放<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> printerResponse = <span class="keyword">try</span> send(job: <span class="number">1440</span>, toPrinter: <span class="string">&quot;Gutenberg&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(printerResponse)</span><br><span class="line">&#125; <span class="keyword">catch</span> <span class="type">PrinterError</span>.onFire &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;I&#x27;ll just put this over here, with the rest of the fire.&quot;</span>)</span><br><span class="line">&#125; <span class="keyword">catch</span> <span class="keyword">let</span> printerError <span class="keyword">as</span> <span class="type">PrinterError</span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Printer error: \(printerError).&quot;</span>)</span><br><span class="line">&#125; <span class="keyword">catch</span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(error)</span><br><span class="line">&#125; <span class="keyword">defer</span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;statement that will always executes&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>swift中提供了区别于catch的另外一种方式进行异常处理，使用try?，如果执行过程中发生了异常，则返回nil，否则返回包含返回值的可选类型变量<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// printerSuccess的类型为可选类型</span></span><br><span class="line"><span class="keyword">let</span> printerSuccess = <span class="keyword">try</span>? send(job: <span class="number">1884</span>, toPrinter: <span class="string">&quot;Mergenthaler&quot;</span>)</span><br><span class="line"><span class="keyword">let</span> printerFailure = <span class="keyword">try</span>? send(job: <span class="number">1885</span>, toPrinter: <span class="string">&quot;Never Has Toner&quot;</span>)</span><br></pre></td></tr></table></figure></p>
+        <p>装系统或许绝大多数人都很熟悉，装双系统可能绝大多数也知道如何操作，但是亲身安装黑苹果的人却并不多，事实上黑苹果的安装并不是很困难，但是想要达到完美黑苹果确实很难，我简单介绍一下如果安装一个能用的黑苹果<br><a id="more"></a></p>
+<h2 id="黑苹果简介"><a href="#黑苹果简介" class="headerlink" title="黑苹果简介"></a>黑苹果简介</h2><p>黑苹果相比传统的系统安装主要有两大难题，分别是系统引导问题和驱动问题，解决了系统引导问题就意味着能够安装一个能用的黑苹果，后面如果能够都打上支持自己机型的驱动，则可以达到完美黑苹果。</p>
+<p>引导问题：在正常情况下是无法在非苹果设备中安装MACOS的，因为在安装系统之前会运行一个自检程序，如果检查到设备不是MAC设备，则会在屏幕上显示一个禁止符号，无j进行接下来的安装步骤，因此安装黑苹果的首要步骤就是骗过该自检程序，目前常见的引导方式有Clover和OC两种方式，其中Clover是早期的引导方式，OC是新推出的引导方式，引导文件在EFI分区下，虽然引导文件的结构非常复杂，但是网上通常会有开发者分享自己机型的引导文件，在网上一般都可以查找到适合自己机型的引导文件下载下来即可（建议选择OC的引导方式）</p>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><p>准备内容：</p>
+<ol>
+<li>下载整合了Clover或者OC引导的macos的dmg镜像文件（可以在黑果小兵的部落阁下载）</li>
+<li>balenaEtcher（用于将镜像写入U盘）</li>
+<li>diskgenius软件（用于转移EFI文件的路径以及调整分区）</li>
+<li>自己机型的EFI文件</li>
+</ol>
+<p>安装步骤：（强烈建议将macos安装到固态硬盘，否则会很卡）</p>
+<ol>
+<li>如果macos和windows想要安装到同一块硬盘，则需要先调整EFI分区的大小使得其至少是200MB</li>
+<li>为要安装的MACOS压缩产生至少50GB的空闲空间（MACOS一经安装，之后容量不能更改，并且MAC中的软件都很占存储空间）<br>3.将分配的空闲空间点击新建简单卷，不分配盘符，点击不要格式化该卷</li>
+<li>使用balenaEtche将j镜像写入U盘</li>
+<li>打开diskgenius软件，将U盘的EFI分区的EFI替换为自己机型的EFI文件夹</li>
+<li>重启电脑，选择从U盘启动，开始进行黑苹果的安装（如果出现了白苹果，说明引导成功）</li>
+<li>选择磁盘工具，先将之前划分的空间格式化为APFS文件系统（MACOS专用的文件系统）：格式选择MACOS扩展日志式，然后像正常的安装系统的方式</li>
+<li>安装结束之后这时候EFI还在U盘中，打开WINDOWS将MACOS的EFI复制到WINDOWS的EFI分区即可。</li>
+</ol>
 
       
 
@@ -214,7 +229,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">swift教程</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">黑苹果</a>
         		</li>
       		
 		</ul>
@@ -270,7 +285,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/09/16/swift-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/09/27/%E9%BB%91%E8%8B%B9%E6%9E%9C%E5%AE%89%E8%A3%85/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -284,18 +299,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/09/16/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%A1%88%E4%BE%8B/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          数学建模案例
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/09/16/swift-%E6%9E%9A%E4%B8%BE%E5%92%8C%E7%BB%93%E6%9E%84/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">swift 枚举和结构</div>
+    <a href="/2020/09/27/C%E7%9B%98%E7%98%A6%E8%BA%AB/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C盘瘦身</div>
       <i class="icon-circle-right"></i>
     </a>
   
