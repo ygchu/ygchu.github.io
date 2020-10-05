@@ -15,11 +15,13 @@
 <meta property="og:site_name" content="ygchu的博客">
 <meta property="og:description" content="介绍操作系统的引导过程">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/05/0YPCQK.png">
 <meta property="article:published_time" content="2020-09-17T06:09:11.000Z">
-<meta property="article:modified_time" content="2020-09-17T06:50:03.241Z">
+<meta property="article:modified_time" content="2020-10-05T03:56:19.726Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="操作系统">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/10/05/0YPCQK.png">
   
     <link rel="alternative" href="/atom.xml" title="ygchu的博客" type="application/atom+xml">
   
@@ -176,7 +178,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>介绍操作系统的引导过程<br><a id="more"></a></p>
-<h2 id="第一阶段：硬件自检"><a href="#第一阶段：硬件自检" class="headerlink" title="第一阶段：硬件自检"></a>第一阶段：硬件自检</h2><p>BIOS存储在主板的ROM中，当按下电源键之后，BIOS程序率先启动，该程序可以看作一个微型的操作系统，在启动之后，BIOS首先进行硬件自检，检查各个硬件是否能够正常工作，这个阶段通常称为POST（Power-On Self Test），如果硬件出现问题，则启动会中止，如果没有问题，则会进入启动的下一个阶段</p>
+<h1 id="BIOS引导过程"><a href="#BIOS引导过程" class="headerlink" title="BIOS引导过程"></a>BIOS引导过程</h1><h2 id="第一阶段：硬件自检"><a href="#第一阶段：硬件自检" class="headerlink" title="第一阶段：硬件自检"></a>第一阶段：硬件自检</h2><p>BIOS存储在主板的ROM中，当按下电源键之后，BIOS程序率先启动，该程序可以看作一个微型的操作系统，在启动之后，BIOS首先进行硬件自检，检查各个硬件是否能够正常工作，这个阶段通常称为POST（Power-On Self Test），如果硬件出现问题，则启动会中止，如果没有问题，则会进入启动的下一个阶段</p>
 <h2 id="第二阶段：启动顺序"><a href="#第二阶段：启动顺序" class="headerlink" title="第二阶段：启动顺序"></a>第二阶段：启动顺序</h2><p>在硬件自检完成之后，BIOS的基本工作已经完成，需要将控制权转交给下一个阶段的启动程序，此时BIOS需要知道该程序的存储位置，可能存储该程序的存储设备的排序称为”Boot Sequence”（这是在装系统的时候通常需要调整的设置），在BIOS中可以设置启动顺序，BIOS会根据启动顺序依次检查每个存储设备是否具有启动程序，直到所有的存储设备都被检查或者找到一个具有启动程序的存储设备开始启动</p>
 <h2 id="第三阶段：主引导记录"><a href="#第三阶段：主引导记录" class="headerlink" title="第三阶段：主引导记录"></a>第三阶段：主引导记录</h2><p>BIOS下阶段的启动程序叫做主引导记录（MBR），BIOS是如何判断存储设备中是否具有MBR呢，BIOS会读取存储设备的前512B，如果最后两个字节是0X55和0XAA（magic number），则认为该设备可以用于启动，否则不能用于启动</p>
 <p>主引导记录的组成：</p>
@@ -197,6 +199,23 @@
 </ol>
 <p>由于DPT的表项限制，因此使用MBR的单个硬盘可利用空间最大也不超过2TB，如果想要使用更大的硬盘，需要提高每个扇区的字节数或者更换为GPT</p>
 <h2 id="第四阶段：操作系统"><a href="#第四阶段：操作系统" class="headerlink" title="第四阶段：操作系统"></a>第四阶段：操作系统</h2><p>控制权转交给操作系统，操作系统首先将其内核载入内存，内核再负责加载系统的各个模块，至此，全部启动程序完成</p>
+<h1 id="UEFI引导方式"><a href="#UEFI引导方式" class="headerlink" title="UEFI引导方式"></a>UEFI引导方式</h1><p>BIOS是一种比较旧的引导方式，目前的电脑通常都采用UEFI的引导方式，使用该方式引导可以支持更大的硬盘以及提供更快的引导速度</p>
+<h2 id="EFI-ESP分区"><a href="#EFI-ESP分区" class="headerlink" title="EFI/ESP分区"></a>EFI/ESP分区</h2><p>EFI的全称为可扩展部件接口，最早为intel为其安腾处理器开发芯片组时研发的一种技术，EFI分区（在windows中被称为ESP分区），该分区采用FAT32的文件系统格式，除此之外，在windows中还有一个大小为128MB的MSR分区，该分区是windows要求的。该分区中存储了操作系统的引导程序，如果在该硬盘上安装了多个操作系统，则在EFI分区中存在多个操作系统的引导程序。如果删除了该分区将会导致系统无法进行引导。<br>总结：在采用GPT格式的启动硬盘中会多出来一个特殊的EFI分区，在windows中还会多出来一个MSR分区（microsoft保留分区）</p>
+<h2 id="MBR和GPT"><a href="#MBR和GPT" class="headerlink" title="MBR和GPT"></a>MBR和GPT</h2><p>MBR的全称为主引导记录，属于早期的硬盘分区格式，其特点有最大支持2TB的硬盘并且最多只支持4个主分区，如果分区数量超过4个则会将一个主分区转换为扩展分区，扩展分区可以包含多个逻辑分区，在MBR中记录了操作系统的启动加载器的位置信息，因此BIOS在读取了MBR的信息之后可以进行下一步的操作系统引导过程。</p>
+<p>由于MBR设计的缺陷，现在基本上都已经转变为GPT格式，GPT的全程为GUID分区表，GUID表示硬盘上的每个分区都具有一个全局唯一的标识符，因此采用GPT格式的硬盘理论上支持无限个分区，在windows中限制一个硬盘的分区个数不超过128个，并且GPT硬盘中对分区表进行了复制和CRC保护，因此更加可靠，对于硬盘上的MBR信息以及GPT信息，我们都是不可见的，只能看到分区区域的部分。</p>
+<p>对于MBR格式的硬盘，如果需要作为启动硬盘，不需要做额外的处理，因为在DPT中已经记录了哪个分区是操作系统所在的分区，而对于GPT格式的硬盘，如果需要作为启动硬盘，则还需要额外建立一个EFI分区用来存储操作系统的引导文件。<br><img src="https://s1.ax1x.com/2020/10/05/0YPCQK.png" alt="0YPCQK.png"></p>
+<h2 id="UEFI-BIOS"><a href="#UEFI-BIOS" class="headerlink" title="UEFI BIOS"></a>UEFI BIOS</h2><p>由于英特尔的安腾处理器计划的流产，英特尔联合各大PC厂家在EFI标准的基础上建立了UEFI标准，称为统一可扩展固件接口，UEFI有以下特点：</p>
+<ul>
+<li>UEFI使用GPT格式，不支持MBR格式；（GPT支持更多的分区个数，并且如果被破坏容易进行恢复）</li>
+<li>UEFI采用图形操作并且支持鼠标操作（如果进入BIOS之后发现是图形界面，说明时UEFI BIOS）</li>
+<li>EFI（ESP）分区独立存在；</li>
+</ul>
+<p>如果想要采用UEFI启动方式，有以下要求：</p>
+<ul>
+<li>主板支持UEFI启动（UEFI需要硬件支持）</li>
+<li>硬盘分区采用GPT方式</li>
+<li>存在EFI/ESP分区</li>
+</ul>
 
       
 
