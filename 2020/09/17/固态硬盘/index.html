@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/ygchu/images/master/20200917200937.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/ygchu/images/master/20200917201025.png">
 <meta property="article:published_time" content="2020-09-17T11:45:05.000Z">
-<meta property="article:modified_time" content="2020-09-18T00:25:51.213Z">
+<meta property="article:modified_time" content="2020-10-08T04:00:22.969Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="计算机组成原理">
 <meta property="article:tag" content="硬盘">
@@ -186,7 +186,7 @@
 <h2 id="固态硬盘"><a href="#固态硬盘" class="headerlink" title="固态硬盘"></a>固态硬盘</h2><p>固态硬盘的组成和机械硬盘类似，同样由存储部件和控制部件组成，其中存储部件为颗粒，控制部件为主控，除此之外，固态硬盘中通常还有DDR缓存用来提高固态硬盘的性能<br><img src="https://raw.githubusercontent.com/ygchu/images/master/20200917201025.png" alt=""></p>
 <h3 id="颗粒"><a href="#颗粒" class="headerlink" title="颗粒"></a>颗粒</h3><p>常见的颗粒有SLC，MLC和TLC，简单来说，这三种颗粒的区别为单位存储单元存储的bit数，依次为1, 2, 3, 目前还出现了QLC的颗粒（即单位存储单元存储4bit），一般来说，单位存储单元存储的bit数越多，则寿命越短，存取时间越长，目前最常见的是TLC颗粒</p>
 <h3 id="主控"><a href="#主控" class="headerlink" title="主控"></a>主控</h3><p>主控用于管理固态硬盘中的数据</p>
-<h3 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h3><p>DDR缓存：固态硬盘上独立的组件，速度和内存近似<br>SLC缓存：使用部分颗粒用来模拟SLC缓存</p>
+<h3 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h3><p>DDR缓存：固态硬盘上独立的组件，速度和内存近似<br>SLC缓存：使用部分颗粒用来模拟SLC缓存，目前市面上常见的又SLC，MLC和TLC以及QLC颗粒，这些颗粒的结构并没有本质区别，只是给每个单元写入的电荷量的差别，因此TLC的颗粒完全可以当作SLC来写，不过容量会降低3倍，这也是SLC缓存的原理，将TLC的一部分颗粒当作SLC来写入，从而提高SSD的写入速度，等待SSD空闲的时候，再由主控负责将SLC缓存中的数据转换为TLC的模式，但是当SLC缓存用完的时候，SSD的写入速度会被立刻打回原型，回到TLC本身的写入速度，SLC缓存是一把双刃剑，模拟的越多，会产生越大的副作用，很多不入流的固态都是直接采用全盘模拟的方式，从而导致固态写入量过多的时候，性能大幅度降低，会产生三段式的效果，第一次掉速是由于SLC缓存用完，开始使用TLC的模式写入，第二次掉速是由于TLC也用完了，在写入的同时还需要将原本的SLC缓存的数据转换为TLC的模式。</p>
 <p>补充：硬盘纸面上的读写速度有多种，常见的有顺序读写速度和4K随机读写速度，顺序速度影响着读写一个超大文件的速度，通常来说，这类速度最快，但是实际使用场景中很少见到；而4K随机读写速度影响着读写多个小文件的速度，这对应着我们通常的使用场景，因此在选购固态硬盘的时候应该主要关注该速度</p>
 <p>市场上常见的固态硬盘有零售版本和OEM版本，OEM版本为固态硬盘商家批发给品牌机的生产厂家的，网上流传出来的一般都是拆机或者黑色渠道获取的，这类固态虽然便宜但是没有售后</p>
 
